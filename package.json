@@ -1,13 +1,13 @@
 {
-  "dependencies": {
-    "nodemon": "^3.1.10"
-  },
   "name": "projectjs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "eslint . --ext .js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,15 @@
   "bugs": {
     "url": "https://github.com/VivaCristioRey/projectJS/issues"
   },
-  "homepage": "https://github.com/VivaCristioRey/projectJS#readme"
+  "homepage": "https://github.com/VivaCristioRey/projectJS#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1",
+    "morgan": "^1.10.0",
+    "router": "^2.2.0"
+  }
 }
