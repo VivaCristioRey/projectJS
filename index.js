@@ -36,15 +36,15 @@ app.post('/productos', async (req, res) => {
     }
     let insercion = await productoModel.create(nuevoProducto);
     if (insercion)
-        res.status(200).json({mensaje: "Registro exitoso"})
+        res.status(200).json({ mensaje: "Registro exitoso" })
     else
-        res.status(404).json({error: "No se ha podido guardar"})
+        res.status(404).json({ error: "No se ha podido guardar" })
 })
-app.delete('/productos/:id', async (req, res)=>{
-    console.log(req.params.name, req.body.referenciaProducto)
-    let eliminacion = await productoModel.findOneAndDelete({nombre:req.params.name})
+app.delete('/productos/:name', async (req, res) => {
+    console.log(req.params.name)
+    let eliminacion = await productoModel.findOneAndDelete({ nombre: req.params.name })
     if (eliminacion)
-        res.status(200).json({mensaje: "Elminación exitosa"})
-    else  
-        res.status(404).json({error: "No se ha encontrado"})
+        res.status(200).json({ mensaje: "Elminación exitosa" })
+    else
+        res.status(404).json({ error: "No se ha encontrado" })
 })
