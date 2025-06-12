@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("../config/database");
 const schemaProduct = new mongoose.Schema({
     id: {
         type: mongoose.Schema.Types.ObjectId,
